@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy</title>
+    <style>
+        /* CSS goes here */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f3e7e9 0%, #f9e0c5 50%, #e3eeff 100%);
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .hero-content h2 {
+            font-size: 3em;
+            margin: 0;
+            color: #333;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .hero-content .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 15px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        #content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            flex-direction: row;
+        }
+
+        #content-wrapper img {
+            max-width: 50%;
+            height: 500px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+        }
+
+        #topic-image-1 {
+            margin-right: -10%;
+            position: relative;
+            left: -15%;
+        }
+
+        #topic-image-2 {
+            margin-left: -10%;
+            position: relative;
+            right: -15%;
+        }
+
+        .feature {
+            max-width: 40%;
+            padding: 20px;
+        }
+
+        .feature h3 {
+            color: #007bff;
+            margin-top: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .feature p {
+            font-size: 1.2em;
+        }
+
+        .testimonials, .faq {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .testimonials, .faq {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials h2, .faq h2 {
+            color: #007bff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #calendar {
+            margin: 20px 0;
+        }
+
+        .gradient-background {
+            background: linear-gradient(135deg, #ffe3f3 0%, #e0ffe5 50%, #e3eeff 100%);
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gradient-background img {
+            border-radius: 15px; /* Ensure image has rounded corners */
+        }
+
+        .carousel-container {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .carousel-item {
+            flex: none;
+            scroll-snap-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .carousel-item h3 {
+            color: #007bff;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .carousel-item p {
+            font-size: 1.1em;
+        }
+
+        .divider {
+            border-top: 2px solid #ccc;
+            margin: 20px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StudyBuddy</h1>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="signup-tab"><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Empower your study sessions today</h2>
+            <p>Enhance your learning experience by easily organizing group study sessions with your classmates and peers on StudyBuddy.</p>
+            <a href="calendar.html" class="btn">Schedule Session</a>
+        </div>
+    </section>
+
+    <!-- First Section with Image and Feature -->
+    <section id="content-wrapper">
+        <img id="topic-image-1" src="images/studygroup.jpg" alt="Group Study Session">
+        <div class="feature">
+            <h3>Collaborate with classmates</h3>
+            <p>StudyBuddy allows you to easily collaborate with your classmates and peers by organizing group study sessions. Work together, share notes, and discuss challenging topics to enhance your understanding of the subject matter.</p>
+        </div>
+    </section>
+
+    <!-- Second Section with Image and Feature -->
+    <section id="content-wrapper" class="gradient-background">
+        <div class="feature">
+            <h3>Increase productivity</h3>
+            <p>Increase your productivity by studying in a group setting. Engage in focused discussions, ask questions, and receive immediate feedback from your peers, helping you to grasp concepts more effectively and efficiently.</p>
+        </div>
+        <img id="topic-image-2" src="images/collegestudentsoncampus-blog-062217-1280x720.jpg” alt=“College Students on Campus”>
+        <!-- How it works Section -->
+<section id="how-it-works">
+    <h2 style="text-align: center; font-size: 2.5em; color: #007bff;">How it Works</h2>
+    <div style="padding: 20px; text-align: left; max-width: 800px; margin: auto;">
+        <h3>1. Tell us about yourself</h3>
+        <p>Fill in your university and course details to help us match you with relevant study groups.</p>
+        <div class="divider"></div>
+        <h3>2. Discover Study Sessions</h3>
+        <p>Explore existing study groups or sessions related to your courses and interests.</p>
+        <div class="divider"></div>
+        <h3>3. Join or Start a Study Session</h3>
+        <p>Join an existing session or start a new one with students from your course.</p>
+        <div class="divider"></div>
+        <h3>4. Find your Community</h3>
+        <p>Connect with broader communities within your university or study field for additional support and resources.</p>
+        <div class="divider"></div>
+        <h3>5. Connect and Collaborate</h3>
+        <p>Engage in meaningful conversations, plan your study sessions, and collaborate effectively with your peers.</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Testimonials</h2>
+    <p>"StudyBuddy helped me find the perfect study group!" - Jane Doe</p>
+    <p>"An amazing tool for connecting with classmates!" - John Smith</p>
+</section>
+
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How does StudyBuddy work?</strong> Sign up, list your courses, and find study partners.</p>
+    <p><strong>Is StudyBuddy free?</strong> Yes, it's completely free for students.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 StudyBuddy. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
